@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project cp2110-hid-driver">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="C:/Work/workspace/cp2110-hid-driver/cp2110-hid-driver.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="soalib.jni.CP2110HidUart"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="C:/Work/workspace/cp2110-hid-driver/bin"/>
+            <fileset dir="C:/Work/workspace/cp2110-hid-driver/" includes="**.dll"/>
+            <fileset dir="C:/Work/workspace/cp2110-hid-driver/" includes="*.so.*"/>
+            <fileset dir="C:/Work/workspace/cp2110-hid-driver/" includes="*.dylib"/>
+            <fileset dir="C:/Work/workspace/cp2110-hid-driver/" includes="*.TXT"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Work/workspace/cp2110-hid-driver/lib/jna.jar"/>
+            </jar>
+    </target>
+</project>
